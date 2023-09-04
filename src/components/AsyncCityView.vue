@@ -6,11 +6,10 @@
       class="text-white p-4 bg-weather-secondary w-full text-center"
     >
       <p>
-        you are currently previewing this city, click the + icon to start
+        You are currently previewing this city, click the "+" icon to start
         tracking this city.
       </p>
     </div>
-
     <!-- Weather Overview -->
     <div class="flex flex-col items-center text-white py-12">
       <h1 class="text-4xl mb-2">{{ route.params.city }}</h1>
@@ -150,4 +149,12 @@ const getWeatherData = async () => {
 const weatherData = await getWeatherData();
 
 const router = useRouter();
+const removeCity = () => {
+  const cities = JSON.parse(localStorage.getItem("savedCities"));
+  const updatedCities = cities.filter((city) => city.id !== route.query.id);
+  localStorage.setItem("savedCities", JSON.stringify(updatedCities));
+  router.push({
+    name: "home",
+  });
+};
 </script>

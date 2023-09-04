@@ -11,14 +11,15 @@
 
       <ul
         v-if="mapboxSearchResults"
-        class="absolute bg-weather-secondary text-white- w-full shadow-md py-2 px-1 top-[66]"
+        class="absolute bg-weather-secondary text-white w-full shadow-md py-2 px-1"
       >
-        <p v-if="searchError">Sorry, something when error. Please try again.</p>
-
-        <p v-if="!searchError && mapboxSearchResults.length === 0">
-          No results match your query. Try a different term.
+        <p class="py-2" v-if="searchError">
+          Sorry, something went wrong, please try again.
         </p>
 
+        <p class="py-2" v-if="!searchError && mapboxSearchResults.length === 0">
+          No results match your query, try a different term.
+        </p>
         <template v-else>
           <li
             v-for="searchResult in mapboxSearchResults"
@@ -46,6 +47,7 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
+import CityCardSkeleton from "../components/CityCardSkeleton.vue";
 import CityList from "../components/CityList.vue";
 import { useRouter } from "vue-router";
 
@@ -88,6 +90,7 @@ const getSearchResults = () => {
         // error catching
         searchError.value = true;
       }
+
       return;
     }
     mapboxSearchResults.value = null;
