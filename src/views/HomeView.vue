@@ -1,5 +1,5 @@
 <template>
-  <main class="container text-white">
+  <main class="container text-black">
     <div class="pt-4 mb-8 relative">
       <input
         type="text"
@@ -11,7 +11,7 @@
 
       <ul
         v-if="mapboxSearchResults"
-        class="absolute bg-weather-secondary text-white w-full shadow-md py-2 px-1"
+        class="absolute bg-weather-secondary text-black w-full shadow-md py-2 px-1"
       >
         <p class="py-2" v-if="searchError">
           Sorry, something went wrong, please try again.
