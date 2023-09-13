@@ -1,6 +1,10 @@
 # weatherAPI
 using API with Vue
 
-![image](https://github.com/zac-dodol/weatherAPI/assets/46713066/057474db-8b29-4cad-93d3-b7ddbd4f87c0)
-![image](https://github.com/zac-dodol/weatherAPI/assets/46713066/593710c0-e169-40a8-80fb-b693608f6ff0)
-![image](https://github.com/zac-dodol/weatherAPI/assets/46713066/47955f9a-5da0-4b2d-b478-cd81577619c1)
+// to start the project
+npm run dev
+
+![image](https://github.com/zac-dodol/weatherAPI/assets/46713066/34a0cc5d-353c-4f46-b3d3-1ece5276d540)
+![image](https://github.com/zac-dodol/weatherAPI/assets/46713066/f07deac9-1c16-47bc-8005-7b012a04fd2e)
+![image](https://github.com/zac-dodol/weatherAPI/assets/46713066/8d3b2513-f8ff-4fed-95ad-96b7c02d7c56)
+
